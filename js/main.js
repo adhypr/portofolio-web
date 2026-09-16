@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -9,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Dynamic Greeting based on time of day (Only if element exists, like on Landing Page)
     const greetingEl = document.getElementById('dynamic-greeting');
     if (greetingEl) {
         const hour = new Date().getHours();
@@ -28,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         greetingEl.textContent = greeting;
     }
 
-    // 3. Navbar scroll effect
     const navbar = document.getElementById('navbar');
     if (navbar) {
         window.addEventListener('scroll', () => {
