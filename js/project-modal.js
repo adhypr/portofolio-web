@@ -1,38 +1,30 @@
-/**
- * Project Detail Modal Handler
- * Controls opening and closing the project detail overlay layer
- */
 document.addEventListener('DOMContentLoaded', () => {
     // Project Data Store
     const projectData = {
         '1': {
             title: 'Aplikasi Kasir Apotek Samara',
-            category: 'Desktop Development / Academic Final Project',
             image: '../assets/images/project-apotek.jpg',
             imageAlt: 'Aplikasi Kasir Apotek Samara',
             tags: [
-                { name: 'Java', color: 'bg-primary/20 text-primary' },
-                { name: 'OOP', color: 'bg-primary/20 text-primary' },
-                { name: 'Desktop GUI', color: 'bg-indigo-500/20 text-indigo-300' }
+                { name: 'Desktop', color: 'bg-primary/20 text-primary' },
+                { name: 'Java OOP', color: 'bg-indigo-500/20 text-indigo-300' }
             ],
-            description: 'Aplikasi Kasir Apotek Samara adalah sistem desktop yang dikembangkan secara komprehensif sebagai tugas akhir mata kuliah Object-Oriented Programming (OOP) menggunakan bahasa Java dan NetBeans IDE. Sistem ini dirancang untuk mempermudah dan mempercepat seluruh alur transaksi di apotek, mulai dari katalog obat, manajemen stok, pencatatan resep dokter, hingga proses kalkulasi transaksi kasir dan pencetakan bukti pembayaran secara terstruktur.',
+            description: 'Aplikasi Kasir Apotek Samara adalah sistem desktop yang dikembangkan sebagai tugas akhir mata kuliah Object-Oriented Programming (OOP) menggunakan bahasa Java dan NetBeans IDE. Sistem ini dirancang untuk mempermudah dan mempercepat seluruh alur transaksi di apotek, mulai dari katalog obat, manajemen stok, hingga proses kalkulasi transaksi kasir dan pencetakan bukti pembayaran secara terstruktur.',
             features: [
                 'Katalog & Manajemen Stok Obat: Pencatatan inventaris obat terperinci, kategori sediaan (tablet, sirup, salep), serta pemantauan stok menipis dan tanggal kedaluwarsa.',
                 'Kalkulasi Transaksi Kasir Cepat: Perhitungan otomatis harga total, pajak/diskon, dan nominal kembalian pelanggan tanpa risiko kesalahan hitung.',
-                'Pencatatan Resep Dokter: Formulir khusus untuk mendokumentasikan data pasien, dokter perujuk, serta instruksi dosis obat racikan.',
+                'Manajemen Role Admin, Petugas dan Apoteker guna memastikan keamanan data dan akses yang terstruktur.',
                 'Rekapitulasi Riwayat Transaksi: Pencatatan riwayat transaksi penjualan harian yang terstruktur untuk mempermudah pembukuan dan laporan keuangan.'
             ],
             techStack: ['Java SE', 'Java Swing / GUI', 'NetBeans IDE', 'OOP Architecture', 'MySQL / Local DB']
         },
         '2': {
             title: 'Loadbalancer Network',
-            category: 'Networking Utility / System Engineering',
             image: '../assets/images/project-loadbalancer.jpg',
             imageAlt: 'Loadbalancer Network Application',
             tags: [
-                { name: 'Go', color: 'bg-secondary/20 text-secondary' },
-                { name: 'JavaScript', color: 'bg-secondary/20 text-secondary' },
-                { name: 'Network Sockets', color: 'bg-purple-500/20 text-purple-300' }
+                { name: 'Network', color: 'bg-secondary/20 text-secondary' },
+                { name: 'Desktop', color: 'bg-purple-500/20 text-purple-300' }
             ],
             description: 'Aplikasi utilitas jaringan desktop berbasis Go (Golang) dan antarmuka web modern yang mampu menggabungkan (network bonding/load balancing) dua buah koneksi internet aktif secara simultan pada sistem operasi Windows dan Ubuntu Linux. Solusi ini menghadirkan throughput bandwidth yang lebih optimal serta keandalan konektivitas tinggi berkat mekanisme failover otomatis.',
             features: [
@@ -44,27 +36,41 @@ document.addEventListener('DOMContentLoaded', () => {
             techStack: ['Go (Golang)', 'Socket Programming', 'Network Routing', 'Ubuntu Linux', 'Windows OS', 'JavaScript', 'Tailwind CSS']
         },
         '3': {
+            title: 'Personal Homeserver',
+            image: '../assets/images/homeserver.jpg',
+            imageAlt: 'Personal Homeserver',
+            tags: [
+                { name: 'Network', color: 'bg-primary/20 text-primary' },
+                { name: 'Ubuntu', color: 'bg-primary/20 text-primary' }
+            ],
+            description: 'Personal Homeserver adalah server yang dibangun menggunakan laptop bekas dengan Ubuntu Server OS dan dijalankan di rumah untuk kebutuhan pribadi, seperti penyimpanan data dan manajemen jaringan lokal rumah. Server ini dikonfigurasi untuk dapat diakses dari mana saja melalui jaringan internet dengan keamanan yang terjamin.',
+            features: [
+                'Manajemen Jaringan: Menggunakan Tailscale untuk remote access yang aman ke jaringan lokal dari mana saja (Zero Trust Network).',
+                'Pemblokiran Iklan (Ad-blocker): Implementasi Pi-hole sebagai DNS sinkhole untuk memblokir iklan dan tracker pada seluruh perangkat di rumah.',
+                'Media Server: Konfigurasi Immich sebagai alternatif Google Photos yang berjalan secara lokal untuk backup foto dan video otomatis dari smartphone.',
+                'Kinerja Optimal: Manajemen resource server yang efisien berjalan pada lingkungan Linux (Ubuntu).'
+            ],
+            techStack: ['Ubuntu Server', 'Tailscale', 'Pi-hole', 'Immich', 'Linux', 'Network Security', 'Docker']
+        },
+        '4': {
             title: 'Dokumen & Data',
-            category: 'Data Management & Document Processing',
             image: '../assets/images/project-data.jpg',
             imageAlt: 'Dokumen & Data Processing',
             tags: [
-                { name: 'Microsoft Office', color: 'bg-primary/20 text-primary' },
-                { name: 'Data Processing', color: 'bg-indigo-500/20 text-indigo-300' },
-                { name: 'Analytics', color: 'bg-secondary/20 text-secondary' }
+                { name: 'Office', color: 'bg-primary/20 text-primary' },
             ],
             description: 'Proyek pengolahan data terstruktur, analisis spreadsheet tingkat lanjut, serta standardisasi format dokumen dan presentasi eksekutif untuk kebutuhan akademik, riset, maupun operasional bisnis. Menitikberatkan pada akurasi komputasi data matematis, otomatisasi formula kompleks, dan tata letak naskah laporan yang rapi serta mudah dipahami.',
             features: [
-                'Otomatisasi Rumus & Spreadsheet: Pemanfaatan formula lanjutan seperti VLOOKUP, INDEX/MATCH, Pivot Table, dan Dynamic Charts untuk pengolahan dataset besar.',
-                'Standardisasi Naskah Dokumen: Penyusunan laporan format baku akademik dan instansi bisnis di Microsoft Word dengan hierarki dokumen yang sistematis.',
-                'Desain Presentasi Interaktif: Pembuatan slide presentasi profesional di Microsoft PowerPoint dengan infografis visual komunikatif.',
-                'Validasi & Rekapitulasi Data: Pembersihan data duplikat, verifikasi konsistensi entri, serta kompilasi laporan operasional siap pakai.'
+                'Formatting Word Terstruktur: Penataan layout dokumen akademik (skripsi/makalah) maupun bisnis dengan standar baku — mencakup penyesuaian margin, watermark, e-sign/tanda tangan digital, hingga page numbering kompleks (romawi).',
+                'Daftar Otomatis (TOC/Lists): Pembuatan Daftar Isi, Daftar Tabel, Daftar Gambar, dan Daftar Lampiran otomatis menggunakan Heading Styles & Caption yang rapi dan terorganisir.',
+                'Konversi Dokumen Presisi: Layanan konversi format (PDF to Word / PDF to Excel) dengan mempertahankan tata letak asli (layout), tabel, font, dan margin tanpa berantakan.',
+                'Olah Data Excel & Spreadsheet: Perapihan tabel dataset, rekapitulasi data, serta pemanfaatan rumus/formula untuk kalkulasi cepat dan akurat.',
+                'Desain Slide PowerPoint: Perapihan dan visualisasi materi presentasi agar tampak modern, proporsional, dan nyaman dibaca untuk kebutuhan sidang atau meeting bisnis.'
             ],
             techStack: ['Microsoft Excel (Advanced Formulas)', 'Microsoft Word (Technical Formatting)', 'Microsoft PowerPoint', 'Data Visualization', 'Pivot & Summary Analytics']
         }
     };
 
-    // Modal DOM Elements
     const modal = document.getElementById('project-modal');
     const modalBackdrop = document.getElementById('project-modal-backdrop');
     const modalCard = document.getElementById('project-modal-card');
@@ -81,19 +87,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!modal) return;
 
-    // Open Modal Function
+
     const openModal = (projectId) => {
         const data = projectData[projectId];
         if (!data) return;
 
-        // Populate content
         modalImg.src = data.image;
         modalImg.alt = data.imageAlt;
         modalCategory.textContent = data.category;
         modalTitle.textContent = data.title;
         modalDesc.textContent = data.description;
 
-        // Populate tags
         modalTags.innerHTML = '';
         data.tags.forEach(tag => {
             const span = document.createElement('span');
@@ -101,8 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
             span.textContent = tag.name;
             modalTags.appendChild(span);
         });
-
-        // Populate features
         modalFeatures.innerHTML = '';
         data.features.forEach(feat => {
             const li = document.createElement('li');
@@ -116,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
             modalFeatures.appendChild(li);
         });
 
-        // Populate tech stack
         modalTech.innerHTML = '';
         data.techStack.forEach(tech => {
             const span = document.createElement('span');
@@ -125,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modalTech.appendChild(span);
         });
 
-        // Show modal with animation
+        // animasi
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
 
@@ -137,7 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Close Modal Function
     const closeModal = () => {
         modal.classList.remove('opacity-100');
         modal.classList.add('opacity-0');
@@ -150,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 300);
     };
 
-    // Attach Event Listeners to Detail Buttons
     const detailButtons = document.querySelectorAll('.open-detail-btn');
     detailButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -160,14 +159,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Close on Button Click
     if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
     if (closeModalBottomBtn) closeModalBottomBtn.addEventListener('click', closeModal);
 
-    // Close on Backdrop Click
     if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
 
-    // Close on Escape Key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
             closeModal();

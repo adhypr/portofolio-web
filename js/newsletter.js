@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const closeModalBtn = document.getElementById('close-modal-btn');
         const submitBtn = document.getElementById('submit-btn');
 
-        // Helper function for email validation
+        // email validasi
         const isValidEmail = (email) => {
             const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return re.test(String(email).toLowerCase());
@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Reset errors
             nameError.classList.add('hidden');
             emailError.classList.add('hidden');
             messageError.classList.add('hidden');
@@ -35,30 +34,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let isValid = true;
 
-            // Validate Name
+            // cek nama
             if (nameInput.value.trim() === '') {
                 nameError.classList.remove('hidden');
                 nameInput.classList.add('border-red-500');
                 isValid = false;
             }
 
-            // Validate Email
+            // cek emasil
             if (!isValidEmail(emailInput.value)) {
                 emailError.classList.remove('hidden');
                 emailInput.classList.add('border-red-500');
                 isValid = false;
             }
 
-            // Validate Message
+            //input pesan
             if (messageInput.value.trim() === '') {
                 messageError.classList.remove('hidden');
                 messageInput.classList.add('border-red-500');
                 isValid = false;
             }
 
-            // If valid, show success modal (Simulate API request)
             if (isValid) {
-                // Change button state to simulate loading
                 const originalBtnText = submitBtn.innerHTML;
                 submitBtn.innerHTML = `
                     <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -69,17 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 submitBtn.disabled = true;
 
-                // Simulate network request delay
+    
                 setTimeout(() => {
-                    // Show modal
                     successModal.classList.remove('hidden');
 
-                    // Trigger animation in next frame
                     requestAnimationFrame(() => {
                         modalContent.classList.add('modal-show');
                     });
 
-                    // Reset form & button
                     contactForm.reset();
                     submitBtn.innerHTML = originalBtnText;
                     submitBtn.disabled = false;
@@ -87,19 +81,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close Modal Logic
         const closeModal = () => {
             modalContent.classList.remove('modal-show');
             setTimeout(() => {
                 successModal.classList.add('hidden');
-            }, 300); // Wait for transition
+            }, 300);
         };
 
         if (closeModalBtn) {
             closeModalBtn.addEventListener('click', closeModal);
         }
-
-        // Close on clicking backdrop
         successModal.addEventListener('click', (e) => {
             if (e.target.classList.contains('modal-backdrop')) {
                 closeModal();
