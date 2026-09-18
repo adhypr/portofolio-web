@@ -126,9 +126,9 @@
                 Beberapa proyek pilihan yang telah saya kerjakan selama masa perkuliahan dan waktu luang.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
                 <!-- Project 1 -->
-                <div class="group bg-darker/50 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(99,102,241,0.2)] fade-in-up"
+                <div class="group bg-darker/50 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(99,102,241,0.2)] fade-in-up lg:col-span-2"
                     style="animation-delay: 0.2s">
                     <div class="h-48 relative overflow-hidden bg-white/5">
                         <img src="../assets/images/project-apotek.jpg" alt="Aplikasi Kasir Apotek Samara"
@@ -162,7 +162,7 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="group bg-darker/50 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(168,85,247,0.2)] fade-in-up"
+                <div class="group bg-darker/50 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(168,85,247,0.2)] fade-in-up lg:col-span-2"
                     style="animation-delay: 0.3s">
                     <div class="h-48 relative overflow-hidden bg-white/5">
                         <img src="../assets/images/project-loadbalancer.jpg" alt="Loadbalancer Network"
@@ -196,7 +196,7 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="group bg-darker/50 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(99,102,241,0.2)] fade-in-up"
+                <div class="group bg-darker/50 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(99,102,241,0.2)] fade-in-up lg:col-span-2"
                     style="animation-delay: 0.4s">
                     <div class="h-48 relative overflow-hidden bg-white/5">
                         <img src="../assets/images/homeserver.jpg" alt="Personal Homeserver"
@@ -230,7 +230,7 @@
                 </div>
 
                 <!-- Project 4 -->
-                <div class="group bg-darker/50 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(99,102,241,0.2)] fade-in-up lg:col-start-2"
+                <div class="group bg-darker/50 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(99,102,241,0.2)] fade-in-up lg:col-span-2 lg:col-start-2"
                     style="animation-delay: 0.4s">
                     <div class="h-48 relative overflow-hidden bg-white/5">
                         <img src="../assets/images/project-data.jpg" alt="Dokumen & Data"
@@ -252,6 +252,43 @@
                             class="open-detail-btn inline-flex items-center text-sm font-medium text-white hover:text-primary transition-colors cursor-pointer group/btn"
                             data-project="4">
                             <span>Lihat Detail</span>
+                            <svg class="ml-1.5 w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 5: Subnet Calculator -->
+                <div class="group bg-darker/50 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(34,197,94,0.2)] fade-in-up lg:col-span-2"
+                    style="animation-delay: 0.5s">
+                    <div class="h-48 relative overflow-hidden bg-white/5 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-emerald-500/50 group-hover:scale-110 transition-transform duration-500"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-darker via-darker/30 to-transparent opacity-70 group-hover:opacity-40 transition-opacity duration-300">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex gap-2 mb-3">
+                            <span
+                                class="px-2 py-1 text-xs font-medium rounded-md bg-emerald-500/20 text-emerald-400">Interactive</span>
+                            <span
+                                class="px-2 py-1 text-xs font-medium rounded-md bg-emerald-500/20 text-emerald-400">Tool</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                            Perhitungan Subnetting</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-2">Fitur interaktif untuk menghitung Subnet
+                            Mask,
+                            Range IP, dan Total Host jaringan.</p>
+                        <button type="button" id="open-calc-btn"
+                            class="inline-flex items-center text-sm font-medium text-white hover:text-emerald-400 transition-colors cursor-pointer group/btn">
+                            <span>Gunakan Kalkulator</span>
                             <svg class="ml-1.5 w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"
                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -320,6 +357,78 @@
         </div>
     </div>
 
+    </div>
+
+    <!-- Calculator Interactive Modal -->
+    <div id="calc-modal"
+        class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300">
+        <div id="calc-modal-backdrop" class="absolute inset-0 bg-darker/80 backdrop-blur-md cursor-pointer"></div>
+        <div id="calc-modal-card"
+            class="relative bg-darker border border-emerald-500/30 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-[0_0_40px_rgba(34,197,94,0.15)] transform scale-95 transition-all duration-300 z-10">
+            <button id="close-calc-modal-btn"
+                class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-darker/80 hover:bg-white/10 text-slate-400 hover:text-white flex items-center justify-center border border-white/10 transition-colors">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="p-6 sm:p-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Network Subnet Calculator</h2>
+                <p class="text-slate-400 mb-8 text-sm">Mari coba fitur interaktif ini untuk menghitung IP Subnetting.
+                </p>
+
+                <form id="subnet-form" class="flex flex-col md:flex-row gap-4 mb-8">
+                    <div class="flex-grow">
+                        <label for="ip-address" class="block text-sm font-medium text-slate-400 mb-2">IP Address</label>
+                        <input type="text" id="ip-address" placeholder="192.168.1.1" required
+                            class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors">
+                    </div>
+                    <div class="w-full md:w-32">
+                        <label for="prefix" class="block text-sm font-medium text-slate-400 mb-2">Prefix ( / )</label>
+                        <input type="number" id="prefix" placeholder="24" min="0" max="32" required
+                            class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors">
+                    </div>
+                    <div class="flex items-end">
+                        <button type="submit"
+                            class="w-full md:w-auto px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-lg transition-colors shadow-lg shadow-emerald-500/20">
+                            Hitung
+                        </button>
+                    </div>
+                </form>
+
+                <div id="calc-result" class="hidden bg-white/5 rounded-xl border border-white/10 p-6">
+                    <h3 class="text-lg font-bold text-white mb-4 border-b border-white/10 pb-2">Hasil Perhitungan</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
+                        <div>
+                            <span class="block text-sm text-slate-500 mb-1">IP & Prefix</span>
+                            <span id="res-ip" class="text-white font-medium">-</span>
+                        </div>
+                        <div>
+                            <span class="block text-sm text-slate-500 mb-1">Subnet Mask</span>
+                            <span id="res-mask" class="text-emerald-400 font-medium">-</span>
+                        </div>
+                        <div>
+                            <span class="block text-sm text-slate-500 mb-1">Network Address</span>
+                            <span id="res-network" class="text-emerald-400 font-medium">-</span>
+                        </div>
+                        <div>
+                            <span class="block text-sm text-slate-500 mb-1">Broadcast Address</span>
+                            <span id="res-broadcast" class="text-emerald-400 font-medium">-</span>
+                        </div>
+                        <div class="md:col-span-2">
+                            <span class="block text-sm text-slate-500 mb-1">Usable IP Range</span>
+                            <span id="res-range" class="text-white font-medium">-</span>
+                        </div>
+                        <div class="md:col-span-2">
+                            <span class="block text-sm text-slate-500 mb-1">Total Usable Hosts</span>
+                            <span id="res-hosts"
+                                class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="border-t border-white/10 bg-darker py-8 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
@@ -349,6 +458,7 @@
 
     <script src="../js/main.js"></script>
     <script src="../js/project-modal.js"></script>
+    <script src="../js/calculate.js"></script>
 </body>
 
 </html>
