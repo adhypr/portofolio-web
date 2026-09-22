@@ -1,0 +1,2 @@
+buatkan javascript logic seperti kalkulator
+scroll di halaman home agar lebih lengkap berikan row dsb
